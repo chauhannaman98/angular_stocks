@@ -18,6 +18,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeCardsComponent } from './components/home-cards/home-cards.component';
 import { SharesComponent } from './components/shares/shares.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
+import { SharesChartComponent } from './components/shares-chart/shares-chart.component';
+
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { CryptoComponent } from './components/crypto/crypto.component';
     HeaderComponent,
     HomeCardsComponent,
     SharesComponent,
-    CryptoComponent
+    CryptoComponent,
+    SharesChartComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { CryptoComponent } from './components/crypto/crypto.component';
     AppRoutingModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

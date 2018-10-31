@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeCardsComponent } from './components/home-cards/home-cards.component';
 import { SharesComponent } from './components/shares/shares.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
+import { SharesChartComponent } from './components/shares-chart/shares-chart.component';
 
 const routes: Routes = [
   { path:  '',
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'shares',
     component: SharesComponent
+  },
+  {
+    path: 'chart',
+    component: SharesChartComponent
   },
   {
     path: 'crypto',
