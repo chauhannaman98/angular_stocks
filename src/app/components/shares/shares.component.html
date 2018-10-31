@@ -10,13 +10,22 @@ justify-content: center;">
   <mat-card-content>
     
 <mat-form-field>
-  <input matInput placeholder="Company name" [(ngModel)]="search_term">
+  <input matInput placeholder="Symbol(e.g. INFY.NSE)" [(ngModel)]="search_term" (keyup.enter)="getPrice()">
 </mat-form-field>
 <br/>
 <button mat-raised-button color="primary" (click)="getPrice()">Get price</button>
-  </mat-card-content>
+<br><br><br>
+<ng-container *ngIf="data">
+  Open - {{ open | number }}<br>
+  High - {{ high | number }}<br>
+  low - {{ low | number }}<br>
+  close - {{ close | number }}<br>
+  volume - {{ volume | number }}
+</ng-container>
+</mat-card-content>
+
 </mat-card>
+
 </div>
-{{data | json}}
 
 
